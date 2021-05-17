@@ -34,6 +34,7 @@ func contacts_page(w http.ResponseWriter, r *http.Request) {
 func handleRequest() {
 	http.HandleFunc("/", home_page)
 	http.HandleFunc("/contacts/", contacts_page)
+	http.HandleFunc("/about/", home_page)
 	http.ListenAndServe(":8080", nil)
 
 }
